@@ -23,7 +23,7 @@ jobs:
     
     - name: Build Debian rootfs
       run: |
-        sudo debootstrap --arch=amd64 --variant=minbase bookworm debian-rootfs http://deb.debian.org/debian/
+        sudo debootstrap --arch=amd64 --variant=minbase trixie debian-rootfs http://deb.debian.org/debian/
         sudo tar -czf debian-amd64-rootfs.tar.gz -C debian-rootfs .
     
     - name: Get current date
